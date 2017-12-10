@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--mapper from entity -> model-->
+    <bean id="borrowerMapper" class="main.com.jlaotsezu.library.quan_ly_the_muon.presentation.mappers.BorrowerMapper"/>
+    <bean id="borrowCardMapper" class="main.com.jlaotsezu.library.quan_ly_the_muon.presentation.mappers.BorrowCardMapper"/>
+
+    <bean id="bookMapper" class="main.com.jlaotsezu.library.quan_ly_sach.presentation.mappers.BookMapper"/>
+    <bean id="bookImportRequestMapper" class="main.com.jlaotsezu.library.quan_ly_sach.presentation.mappers.BookImportRequestMapper"/>
+    <bean id="requestImportBooksMapper" class="main.com.jlaotsezu.library.quan_ly_sach.presentation.mappers.RequestImportBooksMapper"/>
+
+    <bean class="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.mappers.BookCopyMapper" id="bookCopyMapper"/>
+    <bean id="loanMapper" class="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.mappers.LoanMapper"/>
+    <bean id="borrowBooksRequestMapper" class="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.mappers.BorrowBooksRequestMapper"/>
+    <!---->
+</beans>

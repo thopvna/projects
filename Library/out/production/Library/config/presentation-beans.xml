@@ -1,0 +1,39 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--<bean id="" class=""/>-->
+    <!--Login-->
+    <bean id="loginPresenter" class="main.com.jlaotsezu.library.quan_ly_nguoi_dung.presentation.presenters.LoginPresenter"/>
+    <bean id="loginController" class="main.com.jlaotsezu.library.quan_ly_nguoi_dung.presentation.views.LoginController"/>
+
+    <!--Register-->
+    <bean id="registerPresenter" class="main.com.jlaotsezu.library.quan_ly_nguoi_dung.presentation.presenters.RegisterPresenter" />
+    <bean id="registerController" class="main.com.jlaotsezu.library.quan_ly_nguoi_dung.presentation.views.RegisterController" />
+
+    <!--Home-->
+    <bean id="homeController" class="main.com.jlaotsezu.library.home.views.HomeController"/>
+    <bean id="homePresenter" class="main.com.jlaotsezu.library.home.presenters.HomePresenter"/>
+    <!--Borrow card manager-->
+    <bean id="issueBorrowCardController" class="main.com.jlaotsezu.library.quan_ly_the_muon.presentation.views.IssueBorrowCardController"/>
+    <bean id="issueBorrowCardPresenter" class="main.com.jlaotsezu.library.quan_ly_the_muon.presentation.presenters.IssueBorrowCardPresenter"/>
+    <bean id="maintainBorrowCardController" class="main.com.jlaotsezu.library.quan_ly_the_muon.presentation.views.MaintainBorrowCardController"/>
+    <bean id="maintainBorrowCardPresenter" class="main.com.jlaotsezu.library.quan_ly_the_muon.presentation.presenters.MaintainBorrowCardPresenter"/>
+    <!--Book manager-->
+    <bean id="bookImportRequestsController" class="main.com.jlaotsezu.library.quan_ly_sach.presentation.views.BookImportRequestsController"/>
+    <bean id="bookImportRequestsPresenter" class="main.com.jlaotsezu.library.quan_ly_sach.presentation.presenters.BookImportRequestsPresenter"/>
+    <bean id="booksController" class="main.com.jlaotsezu.library.quan_ly_sach.presentation.views.BooksController"/>
+    <bean id="booksPresenter" class="main.com.jlaotsezu.library.quan_ly_sach.presentation.presenters.BooksPresenter"/>
+    <bean id="requestImportBooksController" class="main.com.jlaotsezu.library.quan_ly_sach.presentation.views.RequestImportBooksController"/>
+    <bean id="requestImportBooksPresenter" class="main.com.jlaotsezu.library.quan_ly_sach.presentation.presenters.RequestImportBooksPresenter"/>
+    <bean id="booksSelectionDialogController" class="main.com.jlaotsezu.library.quan_ly_sach.presentation.supports.BooksSelectionDialogController"/>
+    <!--Borrow manager-->
+    <bean id="borrowBooksPresenter" class="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.presenters.BorrowBooksPresenter"/>
+    <bean id="borrowBooksRequestsPresenter" class="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.presenters.BorrowBooksRequestsPresenter"/>
+    <bean id="nonReturnLoansPresenter" class="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.presenters.NonReturnLoansPresenter"/>
+    <bean id="borrowBooksController" class="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.views.BorrowBooksController"/>
+    <bean id="borrowBooksRequestController" class="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.views.BorrowBooksRequestController"/>
+    <bean id="borrowCardsSelectionController" class="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.supports.BorrowCardsSelectionController"/>
+    <bean id="nonReturnLoansController" class="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.views.NonReturnLoansController"/>
+</beans>

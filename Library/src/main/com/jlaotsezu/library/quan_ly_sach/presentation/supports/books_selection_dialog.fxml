@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.jlaotsezu.library.quan_ly_sach.presentation.supports.BooksSelectionDialogController">
+   <top>
+      <Label text="Lựa chọn sách" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+      </Label>
+   </top>
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="sttColumn" editable="false" prefWidth="30.0" text="STT" />
+          <TableColumn fx:id="bookIdColumn" editable="false" prefWidth="60.0" text="Mã sách" />
+            <TableColumn fx:id="bookNameColumn" editable="false" prefWidth="160.0" text="Tên sách" />
+            <TableColumn fx:id="authorsColumn" editable="false" prefWidth="100.0" text="Tác giả" />
+            <TableColumn fx:id="classificationColumn" editable="false" prefWidth="100.0" text="Thể loại" />
+            <TableColumn fx:id="publisherColumn" editable="false" prefWidth="100.0" text="NhàXB" />
+            <TableColumn fx:id="publishYearColumn" editable="false" prefWidth="50.0" text="NămXB" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

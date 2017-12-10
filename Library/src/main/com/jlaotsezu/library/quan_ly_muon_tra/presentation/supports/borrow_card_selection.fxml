@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.supports.BorrowCardsSelectionController">
+   <top>
+      <Label text="Lựa chọn Thẻ mượn" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets left="4.0" right="4.0" top="4.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </top>
+    <center>
+        <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="sttColumn" prefWidth="30.0" text="STT" />
+                <TableColumn fx:id="borrowCardIdColumn" prefWidth="50.0" text="Mã thẻ" />
+                <TableColumn fx:id="borrowerNameColumn" prefWidth="60.0" text="Tài khoản" />
+                <TableColumn fx:id="borrowerFullNameColumn" prefWidth="110.0" text="Tên người mượn" />
+                <TableColumn fx:id="issueTimeColumn" prefWidth="90.0" text="Thời điểm cấp" />
+                <TableColumn fx:id="expireTimeColumn" prefWidth="95.0" text="Thời điểm hết hạn" />
+                <TableColumn fx:id="statusColumn" prefWidth="67.0" text="Trạng thái" />
+                <TableColumn fx:id="disableTimeColumn" prefWidth="97.0" text="Thời điểm vô hiệu hóa" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

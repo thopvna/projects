@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--Daos Beans. onInjectContext into Repositories-->
+    <bean id="bookCopyDAO" class="main.com.jlaotsezu.library.data.source.db.BookCopyDAOImpl"/>
+    <bean id="bookDAO" class="main.com.jlaotsezu.library.data.source.db.BookDAOImpl"/>
+    <bean id="bookImportRequestDAO" class="main.com.jlaotsezu.library.data.source.db.BookImportRequestDAOImpl"/>
+    <bean id="borrowCardDAO" class="main.com.jlaotsezu.library.data.source.db.BorrowCardDAOImpl"/>
+    <bean id="booksRequestDAO" class="main.com.jlaotsezu.library.data.source.db.BorrowBooksRequestDAOImpl"/>
+    <bean id="loanDAO" class="main.com.jlaotsezu.library.data.source.db.LoanDAOImpl"/>
+    <bean id="userDAO" class="main.com.jlaotsezu.library.data.source.db.UserDAOImpl"/>
+    <!---->
+
+</beans>

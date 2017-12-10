@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.jlaotsezu.library.quan_ly_sach.presentation.views.RequestImportBooksController">
+   <top>
+      <VBox>
+         <children>
+            <Label text="Thêm yêu cầu nhập sách." BorderPane.alignment="CENTER_LEFT">
+               <BorderPane.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </Label>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <TextField fx:id="keywordField" onKeyPressed="#onKeyPressed" prefHeight="25.0" prefWidth="714.0" promptText="Tìm kiếm sách(Theo ID sách, Tiêu đề sách, Thể loại, Tác giả, Nhà xuất bản, Năm xuất bản, ...)" />
+                  <ImageView fx:id="searchButton" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#onSearchButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../resources/images/ic_search_black_36dp_1x.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin></ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onConfirmButtonClicked" text="Hoàn tất">
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <TableView fx:id="booksTableView" editable="true" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="sttColumn" editable="false" prefWidth="30.0" text="STT" />
+          <TableColumn fx:id="bookIdColumn" editable="false" text="Mã sách" />
+            <TableColumn fx:id="bookNameColumn" editable="false" prefWidth="230.0" text="Tên sách" />
+            <TableColumn fx:id="authorsColumn" editable="false" prefWidth="130.0" text="Tác giả" />
+            <TableColumn fx:id="classificationColumn" editable="false" prefWidth="130.0" text="Thể loại" />
+            <TableColumn fx:id="countColumn" text="Số lượng" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

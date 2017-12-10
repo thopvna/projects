@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane onKeyPressed="#onKeyPressed" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.jlaotsezu.library.quan_ly_nguoi_dung.presentation.views.RegisterController">
+   <children>
+       <Label layoutX="373.0" layoutY="91.0" text="Đăng ký tài khoản">
+           <font>
+               <Font name="System Bold" size="18.0" />
+           </font>
+       </Label>
+       <Label layoutX="361.0" layoutY="139.0" text="Tài khoản" />
+       <Label layoutX="362.0" layoutY="168.0" text="Mật khẩu" />
+       <Label layoutX="352.0" layoutY="203.0" text="Tên đầy đủ" />
+       <Label layoutX="364.0" layoutY="233.0" text="Giới tính" />
+       <Label layoutX="347.0" layoutY="262.0" text="Địa chỉ email" />
+       <Label layoutX="346.0" layoutY="292.0" text="Số điện thoại" />
+       <TextField fx:id="userNameView" layoutX="421.0" layoutY="135.0" promptText="Tài khoản" />
+       <TextField fx:id="passwordView" layoutX="421.0" layoutY="164.0" promptText="Mật khẩu" />
+       <TextField fx:id="fullNameView" layoutX="421.0" layoutY="199.0" promptText="Tên đầy đủ" />
+       <TextField fx:id="emailView" layoutX="421.0" layoutY="258.0" promptText="địa chỉ email" />
+       <TextField fx:id="phoneView" layoutX="421.0" layoutY="288.0" promptText="Số điện thoại" />
+       <RadioButton fx:id="maleView" layoutX="419.0" layoutY="233.0" mnemonicParsing="false" selected="true" text="Nam">
+         <toggleGroup>
+            <ToggleGroup fx:id="genderGroup" />
+         </toggleGroup>
+      </RadioButton>
+       <RadioButton fx:id="femaleView" layoutX="496.0" layoutY="233.0" mnemonicParsing="false" text="Nữ" toggleGroup="$genderGroup" />
+       <Button fx:id="registerButton" layoutX="415.0" layoutY="329.0" mnemonicParsing="false" onAction="#onRegisterButtonClicked" text="ĐĂNG KÝ">
+           <font>
+               <Font name="System Bold" size="14.0" />
+           </font>
+       </Button>
+      <ImageView fx:id="backButton" fitHeight="27.0" fitWidth="31.0" layoutX="317.0" layoutY="91.0" onMouseClicked="#onBackButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../resources/images/ic_arrow_back_black_36dp_1x.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane onKeyPressed="#onKeyPressed" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.jlaotsezu.library.quan_ly_nguoi_dung.presentation.views.LoginController">
+   <children>
+       <Label layoutX="316.0" layoutY="276.0" text="Mật khẩu:" />
+       <Label layoutX="316.0" layoutY="239.0" text="Tài khoản" />
+       <Label layoutX="415.0" layoutY="191.0" text="Đăng Nhập">
+           <font>
+               <Font name="System Bold" size="14.0" />
+           </font>
+       </Label>
+       <TextField fx:id="userNameField" layoutX="382.0" layoutY="235.0" promptText="Nhập tài khoản" />
+       <TextField fx:id="passwordField" layoutX="382.0" layoutY="272.0" promptText="*****" />
+       <Button fx:id="loginButton" layoutX="428.0" layoutY="310.0" mnemonicParsing="false" onAction="#onLoginButtonClicked" text="Login" />
+      <Button fx:id="registerButton" layoutX="14.0" layoutY="561.0" mnemonicParsing="false" onAction="#onRegisterButtonClicked" text="Register" />
+   </children>
+</AnchorPane>

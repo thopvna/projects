@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="bookCopyRepository" class="main.com.jlaotsezu.library.data.repositories.BookCopyRepository"/>
+    <bean id="bookImportRequestRepository" class="main.com.jlaotsezu.library.data.repositories.BookImportRequestRepository"/>
+    <bean id="bookRepository" class="main.com.jlaotsezu.library.data.repositories.BookRepository"/>
+    <bean id="booksRequestRepository" class="main.com.jlaotsezu.library.data.repositories.BorrowBooksRequestRepository"/>
+    <bean id="borrowCardRepository" class="main.com.jlaotsezu.library.data.repositories.BorrowCardRepository"/>
+    <bean id="loanRepository" class="main.com.jlaotsezu.library.data.repositories.LoanRepository"/>
+    <bean id="userRepository" class="main.com.jlaotsezu.library.data.repositories.UserRepository"/>
+
+</beans>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.jlaotsezu.library.quan_ly_sach.presentation.views.BooksController">
+   <center>
+      <TableView fx:id="tableView" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="sttColumn" editable="false" prefWidth="30.0" text="STT" />
+          <TableColumn fx:id="bookIdColumn" editable="false" text="Mã sách" />
+            <TableColumn fx:id="bookNameColumn" editable="false" prefWidth="230.0" text="Tên sách" />
+            <TableColumn fx:id="authorColumn" editable="false" prefWidth="91.0" text="Tác giả" />
+            <TableColumn fx:id="classificationColumn" editable="false" prefWidth="100.0" text="Thể loại" />
+            <TableColumn fx:id="publisherColumn" editable="false" prefWidth="100.0" text="Nhà xuất bản" />
+            <TableColumn fx:id="publishYearColumn" editable="false" prefWidth="50.0" text="NămXB" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <VBox>
+         <children>
+            <Label text="Danh sách Sách" BorderPane.alignment="CENTER_LEFT">
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </BorderPane.margin>
+            </Label>
+            <HBox>
+               <children>
+                  <TextField fx:id="keywordField" onKeyPressed="#onKeyPressed" prefHeight="25.0" prefWidth="696.0" promptText="Tìm kiếm sách(Theo ID sách, Tiêu đề sách, Thể loại, Tác giả, Nhà xuất bản, Năm xuất bản, ...)" />
+                  <ImageView fx:id="searchButton" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#onSearchButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../resources/images/ic_search_black_36dp_1x.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin></ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--Các use cases liên quan đến việc mượn trả-->
+    <bean id="newMannerBorrowBooksUseCase" class="main.com.jlaotsezu.library.quan_ly_muon_tra.domain.usecases.NewMannerBorrowBooksUseCase" scope="prototype"/>
+    <bean id="fetchBorrowBooksRequestsUseCase" class="main.com.jlaotsezu.library.quan_ly_muon_tra.domain.usecases.FetchBorrowBooksRequestsUseCase" scope="prototype"/>
+    <bean id="loadAllBorrowBooksRequestsUseCase" class="main.com.jlaotsezu.library.quan_ly_muon_tra.domain.usecases.LoadAllBorrowBooksRequestsUseCase" scope="prototype"/>
+    <bean id="loadNonReturnLoansUseCase" class="main.com.jlaotsezu.library.quan_ly_muon_tra.domain.usecases.LoadNonReturnLoansUseCase" scope="prototype"/>
+    <bean id="returnBooksUseCase" class="main.com.jlaotsezu.library.quan_ly_muon_tra.domain.usecases.ReturnBooksUseCase" scope="prototype"/>
+    <bean id="confirmBorrowBooksRequestsUseCase" class="main.com.jlaotsezu.library.quan_ly_muon_tra.domain.usecases.ConfirmBorrowBooksRequestsUseCase" scope="prototype"/>
+    <bean id="searchBookCopiesUseCase" class="main.com.jlaotsezu.library.quan_ly_muon_tra.domain.usecases.SearchBookCopiesUseCase" scope="prototype"/>
+    <bean id="fetchBookCopyUseCase" class="main.com.jlaotsezu.library.quan_ly_muon_tra.domain.usecases.FetchBookCopyUseCase" scope="prototype"/>
+    <!---->
+
+    <!--Các use cases liên quan đến việc đăng nhập, đăng ký-->
+    <bean id="loginUseCase" class="main.com.jlaotsezu.library.quan_ly_nguoi_dung.domain.usecases.LoginUseCase" scope="prototype"/>
+    <bean id="registerUseCase" class="main.com.jlaotsezu.library.quan_ly_nguoi_dung.domain.usecases.RegisterUseCase" scope="prototype"/>
+    <!---->
+
+    <!--Cách use case liên quan đến Book-->
+    <bean id="loadBooksUseCase" class="main.com.jlaotsezu.library.quan_ly_sach.domain.usecases.LoadBooksUseCase" scope="prototype"/>
+    <bean id="loadBookImportRequestsUseCase" class="main.com.jlaotsezu.library.quan_ly_sach.domain.usecases.LoadBookImportRequestsUseCase" scope="prototype"/>
+    <bean id="requestImportBooksUseCase" class="main.com.jlaotsezu.library.quan_ly_sach.domain.usecases.RequestImportBooksUseCase" scope="prototype"/>
+    <bean id="searchBooksUseCase" class="main.com.jlaotsezu.library.quan_ly_sach.domain.usecases.SearchBooksUseCase" scope="prototype"/>
+    <bean id="cancelBookImportRequestUseCase" class="main.com.jlaotsezu.library.quan_ly_sach.domain.usecases.CancelBookImportRequestUseCase" scope="prototype"/>
+    <!---->
+
+    <!--Các use case liên quan quản lý thẻ mượn-->
+    <bean id="disableBorrowCardsUseCase" class="main.com.jlaotsezu.library.quan_ly_the_muon.domain.usecases.DisableBorrowCardsUseCase" scope="prototype"/>
+    <bean id="disableBorrowCardUseCase" class="main.com.jlaotsezu.library.quan_ly_the_muon.domain.usecases.DisableBorrowCardUseCase" scope="prototype"/>
+    <bean id="extendBorrowCardUseCase" class="main.com.jlaotsezu.library.quan_ly_the_muon.domain.usecases.ExtendBorrowCardUseCase" scope="prototype"/>
+    <bean id="fetchBorrowCardsUseCase" class="main.com.jlaotsezu.library.quan_ly_the_muon.domain.usecases.FetchBorrowCardsUseCase" scope="prototype"/>
+    <bean id="issueBorrowCardUseCase" class="main.com.jlaotsezu.library.quan_ly_the_muon.domain.usecases.IssueBorrowCardUseCase" scope="prototype"/>
+    <bean id="findBorrowerUseCase" class="main.com.jlaotsezu.library.quan_ly_the_muon.domain.usecases.FindBorrowerUseCase" scope="prototype"/>
+    <bean id="activeBorrowCardUseCase" class="main.com.jlaotsezu.library.quan_ly_the_muon.domain.usecases.ActiveBorrowCardUseCase" scope="prototype"/>
+    <!---->
+
+</beans>

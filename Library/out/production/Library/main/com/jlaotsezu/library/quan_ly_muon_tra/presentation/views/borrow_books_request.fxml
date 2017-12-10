@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.views.BorrowBooksRequestController">
+   <top>
+      <VBox>
+         <children>
+            <Label text="Danh sách yêu cầu mượn sách" BorderPane.alignment="CENTER_LEFT">
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </BorderPane.margin>
+               <VBox.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="0.0" prefWidth="680.0">
+               <children>
+                  <TextField fx:id="keywordField" onKeyPressed="#onKeywordFieldKeyPressed" prefHeight="25.0" prefWidth="737.0" promptText="Tìm kiếm các yêu cầu mượn sách(Theo ID người mượn, Tài khoản người mượn, Tên người mượn, ...)" />
+                  <ImageView fx:id="searchButton" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#onSearchButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../resources/images/ic_search_black_36dp_1x.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="sttColumn" prefWidth="30.0" text="STT" />
+          <TableColumn fx:id="requestIdColumn" prefWidth="50.0" text="Mã YC" />
+            <TableColumn fx:id="borrowerUserNameColumn" prefWidth="110.0" text="Người mượn" />
+            <TableColumn fx:id="borrowerFullNameColumn" prefWidth="110.0" text="Tên người mượn" />
+            <TableColumn fx:id="bookCountColumn" prefWidth="60.0" text="Số cuốn" />
+            <TableColumn fx:id="bornTimeColumn" text="Gửi lúc" />
+            <TableColumn fx:id="confirmTimeColumn" text="Lấy sách lúc" />
+            <TableColumn fx:id="expiredTimeColumn" text="Hạn lấy" />
+            <TableColumn fx:id="statusColumn" text="Trạng thái" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.jlaotsezu.library.home.views.HomeController">
+   <top>
+      <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Xin chào, ">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+            </Label>
+            <Label fx:id="userNameView" text="JLaotsezu">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="logoutButton" onMousePressed="#onLogoutButtonClicked" text="(Đăng xuất)" textFill="#9cd4ff" underline="true" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <TreeView fx:id="navigateTreeView" prefHeight="200.0" prefWidth="220.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <Pane fx:id="contentView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="TOP_LEFT" />
+   </center>
+</BorderPane>

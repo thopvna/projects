@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.jlaotsezu.library.quan_ly_muon_tra.presentation.views.BorrowBooksController">
+   <top>
+      <VBox>
+         <children>
+            <Label text="Cho mượn sách" BorderPane.alignment="CENTER_LEFT">
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </Label>
+            <HBox>
+               <children>
+                  <TextField fx:id="cardKeywordField" onKeyPressed="#onCardKeywordFieldKeyPressed" prefWidth="639.0" promptText="Tìm kiếm Thẻ mượn(Theo ID người mượn, Tài khoản người mượn, Tên người mượn, ...)" />
+                  <ImageView fx:id="cardSearchButton" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#onCardSearchButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../resources/images/ic_search_black_36dp_1x.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+            <HBox prefWidth="672.0">
+               <children>
+                  <Label text="Mã thẻ mượn: " />
+                  <Label fx:id="cardIdLabel" text="Chưa xác định" />
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="3.0" prefWidth="680.0">
+               <children>
+                  <TextField fx:id="bookCopyKeywordField" onKeyPressed="#onBookCopyKeywordFieldKeyPressed" prefWidth="691.0" promptText="Thêm Book Copy bằng ID" />
+                  <ImageView fx:id="bookCopySearchButton" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#onBookCopySearchButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../../../../../../resources/images/ic_add_box_black_36dp_1x.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="sttColumn" editable="false" prefWidth="30.0" text="STT" />
+          <TableColumn fx:id="bookCopyIdColumn" editable="false" prefWidth="65.0" text="Mã cuốn sách" />
+            <TableColumn fx:id="bookCopyTypeColumn" prefWidth="105.0" text="Loại sách" />
+            <TableColumn fx:id="bookCopyStatusColumn" prefWidth="105.0" text="Trạng thái" />
+            <TableColumn fx:id="bookIdColumn" editable="false" prefWidth="60.0" text="Mã sách" />
+            <TableColumn fx:id="bookNameColumn" editable="false" prefWidth="120.0" text="Tên sách" />
+            <TableColumn fx:id="authorsColumn" editable="false" prefWidth="100.0" text="Tác giả" />
+            <TableColumn fx:id="classificationColumn" editable="false" prefWidth="100.0" text="Thể loại" />
+            <TableColumn fx:id="publisherColumn" editable="false" prefWidth="100.0" text="Nhà xuất bản" />
+            <TableColumn fx:id="publishYearColumn" editable="false" prefWidth="60.0" text="NămXB" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onConfirmButtonClicked" text="Xác nhận" BorderPane.alignment="CENTER_LEFT">
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+</BorderPane>

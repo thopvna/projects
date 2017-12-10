@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.jlaotsezu.library.quan_ly_the_muon.presentation.views.MaintainBorrowCardController">
+   <top>
+      <VBox>
+         <children>
+            <Label text="Bảo trì thẻ mượn" BorderPane.alignment="CENTER_LEFT">
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </BorderPane.margin>
+            </Label>
+            <HBox>
+               <children>
+                  <TextField fx:id="keywordField" onKeyPressed="#onKeyPressed" prefHeight="25.0" prefWidth="660.0" promptText="Tìm kiếm thẻ mượn(Theo Tài khoản người dùng, Tên người dùng, ID người dùng, ...)" />
+                  <ImageView fx:id="searchButton" fitHeight="25.0" fitWidth="26.0" onMouseClicked="#onSearchButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../resources/images/ic_search_black_36dp_1x.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin></ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="sttColumn" prefWidth="30.0" text="STT" />
+            <TableColumn fx:id="borrowCardIdColumn" prefWidth="60.0" text="Mã thẻ" />
+            <TableColumn fx:id="borrowerNameColumn" prefWidth="75.0" text="Tài khoản" />
+            <TableColumn fx:id="borrowerFullNameColumn" prefWidth="138.0" text="Tên người mượn" />
+            <TableColumn fx:id="issueTimeColumn" prefWidth="96.0" text="Thời điểm cấp" />
+            <TableColumn fx:id="expireTimeColumn" prefWidth="96.0" text="Thời điểm hết hạn" />
+            <TableColumn fx:id="statusColumn" prefWidth="67.0" text="Trạng thái" />
+            <TableColumn fx:id="disableTimeColumn" prefWidth="120.0" text="Thời điểm vô hiệu hóa" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
