@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="4dp"
+    >
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackgroundBorderless"
+    >
+
+    <TextView
+        android:id="@+id/distanceView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Khoảng cách:"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/houseImageView"
+        app:layout_constraintTop_toBottomOf="@+id/portView"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/houseImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:paddingTop="4dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/town_blue_7" />
+
+    <TextView
+        android:id="@+id/houseNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="House 1"
+        android:lines="1"
+        android:textColor="#000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/houseImageView"
+        app:layout_constraintStart_toStartOf="@+id/houseImageView"
+        app:layout_constraintTop_toBottomOf="@+id/houseImageView" />
+
+    <TextView
+        android:id="@+id/townHallView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:text="Townhall Cấp 1"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/houseImageView"
+        app:layout_constraintTop_toTopOf="@+id/houseImageView" />
+
+    <TextView
+        android:id="@+id/shipyardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Shipyard Cấp 1"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/houseImageView"
+        app:layout_constraintTop_toBottomOf="@+id/townHallView" />
+
+    <TextView
+        android:id="@+id/portView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Port cấp 1"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/houseImageView"
+        app:layout_constraintTop_toBottomOf="@+id/shipyardView" />
+</android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

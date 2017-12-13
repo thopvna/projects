@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thopv.projects.ikariam.home.presentation.HomeActivity"
+    android:background="@drawable/main_islane"
+    >
+
+    <ImageView
+        android:id="@+id/houseImage15"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="306dp"
+        android:layout_y="325dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_15"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="432dp"
+        tools:layout_editor_absoluteY="124dp"
+
+        />
+<!--
+    luôn nhớ rằng nếu thay đổi contentDescription thì thay đổi luôn trong houseIdMapping của HomeSCreenActivty
+-->
+
+    <ImageView
+        android:id="@+id/houseImage6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="86dp"
+        android:layout_y="163dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_6"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="182dp" />
+
+    <ImageView
+        android:id="@+id/houseImage4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="56dp"
+        android:layout_y="127dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_4"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <ImageView
+        android:id="@+id/houseImage5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="117dp"
+        android:layout_y="202dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_5"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="29dp" />
+
+    <ImageView
+        android:id="@+id/houseImage16"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="114dp"
+        android:layout_y="260dp"
+
+        android:background="@android:color/transparent"
+        android:contentDescription="House_16"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="60dp" />
+
+    <ImageView
+        android:id="@+id/houseImage3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="219dp"
+        android:layout_y="246dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_3"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="124dp" />
+
+    <ImageView
+        android:id="@+id/houseImage13"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="299dp"
+        android:layout_y="222dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_13"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="522dp"
+        tools:layout_editor_absoluteY="103dp" />
+
+    <ImageView
+        android:id="@+id/houseImage7"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="236dp"
+        android:layout_y="176dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_7"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="264dp" />
+
+    <ImageView
+        android:id="@+id/houseImage17"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="142dp"
+        android:layout_y="72dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_17"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="124dp" />
+
+    <ImageView
+        android:id="@+id/houseImage2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="198dp"
+        android:layout_y="47dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_2"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="114dp" />
+
+    <ImageView
+        android:id="@+id/houseImage1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="311dp"
+        android:layout_y="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_1"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="97dp"
+
+        tools:layout_editor_absoluteY="223dp" />
+
+    <ImageView
+        android:id="@+id/houseImage9"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="473dp"
+        android:layout_y="85dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_9"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="450dp"
+        tools:layout_editor_absoluteY="213dp" />
+
+    <ImageView
+        android:id="@+id/houseImage11"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="441dp"
+        android:layout_y="190dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_11"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="369dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <ImageView
+        android:id="@+id/houseImage14"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="381dp"
+        android:layout_y="238dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_14"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="432dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/houseImage12"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="537dp"
+        android:layout_y="219dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_12"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/houseImage10"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="553dp"
+        android:layout_y="131dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_10"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="548dp"
+        tools:layout_editor_absoluteY="182dp" />
+
+    <ImageView
+        android:id="@+id/houseImage8"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_x="386dp"
+        android:layout_y="68dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="House_8"
+        android:onClick="onHouseImageClick"
+        android:src="@drawable/flag_red"
+        tools:layout_editor_absoluteX="360dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+</AbsoluteLayout>

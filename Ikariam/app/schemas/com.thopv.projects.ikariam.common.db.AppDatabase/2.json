@@ -1,0 +1,344 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "d9a67de2521221216ee162a58f03eea1",
+    "entities": [
+      {
+        "tableName": "ArmyLog",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`startTime` INTEGER NOT NULL, `endTime` INTEGER NOT NULL, `fromHouseId` TEXT NOT NULL, `toHouseId` TEXT NOT NULL, `content` TEXT, PRIMARY KEY(`startTime`, `fromHouseId`, `toHouseId`))",
+        "fields": [
+          {
+            "fieldPath": "startTime",
+            "columnName": "startTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endTime",
+            "columnName": "endTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fromHouseId",
+            "columnName": "fromHouseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "toHouseId",
+            "columnName": "toHouseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "content",
+            "columnName": "content",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "startTime",
+            "fromHouseId",
+            "toHouseId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "House",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`houseId` TEXT NOT NULL, `party` INTEGER NOT NULL, `userName` TEXT, `townHalllevel` INTEGER, `shipyardlevel` INTEGER, `portlevel` INTEGER, `coordinatex` REAL, `coordinatey` REAL, PRIMARY KEY(`houseId`))",
+        "fields": [
+          {
+            "fieldPath": "houseId",
+            "columnName": "houseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "party",
+            "columnName": "party",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userName",
+            "columnName": "userName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "townHall.level",
+            "columnName": "townHalllevel",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "shipyard.level",
+            "columnName": "shipyardlevel",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "port.level",
+            "columnName": "portlevel",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "coordinate.x",
+            "columnName": "coordinatex",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "coordinate.y",
+            "columnName": "coordinatey",
+            "affinity": "REAL",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "houseId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "User",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`userName` TEXT NOT NULL, `password` TEXT, `fullName` TEXT, `party` INTEGER NOT NULL, PRIMARY KEY(`userName`))",
+        "fields": [
+          {
+            "fieldPath": "userName",
+            "columnName": "userName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "password",
+            "columnName": "password",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fullName",
+            "columnName": "fullName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "party",
+            "columnName": "party",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "userName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "HomeTroop",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`houseId` TEXT NOT NULL, `unitName` TEXT NOT NULL, `amount` INTEGER NOT NULL, PRIMARY KEY(`houseId`, `unitName`))",
+        "fields": [
+          {
+            "fieldPath": "houseId",
+            "columnName": "houseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unitName",
+            "columnName": "unitName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "houseId",
+            "unitName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "AttackTroop",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`fromHouseId` TEXT NOT NULL, `inHouseId` TEXT NOT NULL, `unitName` TEXT NOT NULL, `amount` INTEGER NOT NULL, PRIMARY KEY(`fromHouseId`, `inHouseId`, `unitName`))",
+        "fields": [
+          {
+            "fieldPath": "fromHouseId",
+            "columnName": "fromHouseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "inHouseId",
+            "columnName": "inHouseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unitName",
+            "columnName": "unitName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "fromHouseId",
+            "inHouseId",
+            "unitName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "FieldTroop",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`fromHouseId` TEXT NOT NULL, `inHouseId` TEXT NOT NULL, `unitName` TEXT NOT NULL, `viewId` INTEGER NOT NULL, `amount` INTEGER NOT NULL, `maxAmount` INTEGER NOT NULL, PRIMARY KEY(`fromHouseId`, `inHouseId`, `unitName`, `viewId`))",
+        "fields": [
+          {
+            "fieldPath": "fromHouseId",
+            "columnName": "fromHouseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "inHouseId",
+            "columnName": "inHouseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unitName",
+            "columnName": "unitName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "viewId",
+            "columnName": "viewId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maxAmount",
+            "columnName": "maxAmount",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "fromHouseId",
+            "inHouseId",
+            "unitName",
+            "viewId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "MovingTroop",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`fromHouseId` TEXT NOT NULL, `toHouseId` TEXT NOT NULL, `unitName` TEXT NOT NULL, `amount` INTEGER NOT NULL, `startTime` INTEGER NOT NULL, `endTime` INTEGER NOT NULL, `isConfirm` INTEGER NOT NULL, PRIMARY KEY(`fromHouseId`, `toHouseId`, `unitName`, `startTime`))",
+        "fields": [
+          {
+            "fieldPath": "fromHouseId",
+            "columnName": "fromHouseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "toHouseId",
+            "columnName": "toHouseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unitName",
+            "columnName": "unitName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTime",
+            "columnName": "startTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endTime",
+            "columnName": "endTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isConfirm",
+            "columnName": "isConfirm",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "fromHouseId",
+            "toHouseId",
+            "unitName",
+            "startTime"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"d9a67de2521221216ee162a58f03eea1\")"
+    ]
+  }
+}

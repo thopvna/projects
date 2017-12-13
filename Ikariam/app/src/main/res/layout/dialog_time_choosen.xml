@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="32dp"
+    android:paddingStart="32dp"
+    android:paddingTop="8dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/houseViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/minuteViewCOntainer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/hourView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Giờ"
+            android:inputType="number"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/minuteViewCOntainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/secondViewCOntainer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/houseViewContainer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/minuteView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phút"
+            android:inputType="number"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/secondViewCOntainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/minuteViewCOntainer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/secondView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Giây"
+            android:inputType="number"
+            android:text="5"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+    </android.support.design.widget.TextInputLayout>
+</android.support.constraint.ConstraintLayout>

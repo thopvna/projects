@@ -1,0 +1,100 @@
+
+Xây dựng ứng dụng hỗ trợ tấn công cho game Ikariam đánh THỦY
+1) Mục tiêu: ứng dụng cho phép người chơi giả lập được các thao tác tấn công, tăng quân, rút quân, kích hoạt lò, kích hoạt cá heo, kích hoạt Colossus khi chơi game. Trước khi tấn công một nhà đối phương trong game Ikariam, người chơi sẽ sử dụng ứng dụng này để lường trước được các thiệt hại của mình.
+2) Thuật ngữ:
+a) Kích lò: là hành động kích hoạt tính năng đặc biệt của game. Một khi phe tấn công hoặc phòng thủ kích hoạt lò thì tất cả các đơn vị chiến đấu đều tăng thêm một lượng giáp và tăng thêm một lượng phần trăm sức tấn công. Thời gian hiệu lực: 1 ngày. Thời gian tối thiểu giữa 2 lần kích hoạt lò: có các giá trị khác nhau gồm 7 ngày, 3 ngày 12 giờ, 2 ngày 8 giờ, 1 ngày 6 giờ. Giá trị này tùy thuộc vào điều kiện của người muốn kích hoạt
+Có các mức lò khác nhau và hiệu ứng cũng khác nhau.
+Lò mức 1	Tăng 0 giáp và 10% sức tấn công
+Lò mức 2	Tăng 1 giáp và 10% sức tấn công
+Lò mức 3	Tăng 1 giáp và 15% sức tấn công
+Lò mức 4	Tăng 2 giáp và 15% sức tấn công
+Lò mức 5	Tăng 2 giáp và 20% sức tấn công
+
+b) Kích hoạt Cá heo: là hành động kích hoạt tính năng đặc biệt của game. Khi một bên đã kích hoạt thì tất cả tàu của bên đó sẽ đi nhanh hơn. Thời gian hiệu lực: 4 giờ. Thời gian tối thiểu giữa 2 lần kích hoạt cá heo: có các giá trị khác nhau gồm 1 ngày, 12 giờ, 8 giờ, 6 giờ. Giá trị này tùy thuộc vào điều kiện của người muốn kích hoạt
+Cá heo mức 1	Tàu đi nhanh hơn 10%
+Cá heo mức 2	Tàu đi nhanh hơn 30%
+Cá heo mức 3	Tàu đi nhanh hơn 50%
+Cá heo mức 4	Tàu đi nhanh hơn 70%
+Cá heo mức 5	Tàu đi nhanh hơn 100%
+c) Kích hoạt Colossus: là hành động kích hoạt tính năng đặc biệt của game. Chỉ có tác dụng với bên phòng thủ, chỉ tác dụng khi hai bên đã đánh nhau ít nhất một hiệp và chỉ có tác dụng khi người kích hoạt là người chủ của nhà bị tấn công. Khi bên phòng thủ đã kích hoạt thì quân đội đối phương sẽ bị mất tích một số quân nhất định trong một khoảng thời gian nhất định. Thời gian hiệu lực: ngay lập tức. Thời gian tối thiểu giữa 2 lần kích hoạt Colossus: có các giá trị khác nhau gồm 3 ngày, 1 ngày 12 giờ, 1 ngày, 18 giờ. Giá trị này tùy thuộc vào điều kiện của người muốn kích hoạt
+Colossus mức 1	10% quân địch mất tích, thời gian tan rã 4h30m
+Colossus mức 2	20% quân địch mất tích, thời gian tan rã 5h
+Colossus mức 3	30% quân địch mất tích, thời gian tan rã 5h30m
+Colossus mức 4	50% quân địch mất tích, thời gian tan rã 6h
+Colossus mức 5	100% quân địch mất tích, thời gian tan rã 7h
+
+d) Các vị trí tấn công:
+Một số loại quân chỉ đứng ở một vị trí nhất định, một số quân có thể đứng ở tối đa hai vị trí khác nhau. Nếu nhiều đơn vị có thể xếp trong 1 vị trí thì sẽ phải bố trí theo độ ưu tiên.
+Đây là danh sách các vị trí trống có thể đặt quân. Số lượng các ô và số quân có trong một ô tùy thuộc vào cấp độ của nhà cảng Port/nhà tàu chiến Shipyard. Chẳng hạn ở hình dưới đây là số ô khi nhà cảng cấp 20.
+
+Chi tiết đọc ở: http://ikariam.wikia.com/wiki/Sea_battle
+
+
+d) Garrison Limit:
+Với quân thủy đồn trú trong thành, nếu số quân là giới hạn (nhỏ hơn mức Garrison Limit) thì khi bị tấn công, quân thủy sẽ được bố trí theo một đội hình mặc định.
+Nếu số quân trú trong thành lớn hơn mức Garrison Limit, quân thủy sẽ bố trí theo đội hình khác đi, và điều đó khiến số quân thủy chết trong mỗi hiệp sẽ nhiều hơn.
+Mỗi hiệp đánh nhau, quân thủy đồn trú sẽ chết dần và nếu đến lúc quân thủy đồn trú ít hơn mức Garrison Limit thì sẽ được sắp xếp theo đội hình mặc định.
+Chi tiết của Garrison Limit:
+http://ikariam.wikia.com/wiki/Garrison_limit#Sea_limit
+Chẳng hạn nếu nhà cảng Port cấp 1, nhưng có tới 187 ram, 21 Fire, 21 mortar, 53 catapult, 135 Steam Ram, 9 rocket, 60 diving, 9 Balloon, 8 tender (tổng 503 cộng tàu) đang bố trí ở đó thì Sea Battle sẽ được sắp xếp theo đội hình của nhà cảng Port cấp 15:
+
+Khi nào số tàu còn sống ở dưới mức Garrison Limit thì quân đội mới quay lại bố trí ở đội hình mặc định:
+
+e) Nâng cấp công, giáp:
+Đa số đơn vị (tàu tender) đều có thể nâng cấp tối đa lên thêm 3 đơn vị công và 3 đơn vị thủ. Chi tiết xem ở:
+http://ikariam.wikia.com/wiki/Building:Workshop/Unit
+SV cần xác định sức công giáp của từng loại quân ở Ikariam (trên mạng Internet).
+f) Tác động công phá:
+Có một số luật ngầm định không được ghi trong Ikariam như sau
+Quân thủy chỉ tản mác (Scattered) nếu quân đội đó chỉ còn tàu tender hoặc Paddle hoặc Balloon hoặc rocket hoặc diving.
+Nếu quân thủy còn Mortar hoặc Catapult hoặc Ram hoặc Steam Ram hoặc Fire Ship thì còn tiếp tục chiến đấu.
+Khi hàng cánh bị phá vỡ, thì quân địch ở cánh (tàu Ram) sẽ tập trung diệt hàng tàu Mortar + Catapult trước (là hàng giữa, hàng thứ 2), sau khi diệt xong mới chuyển sang diệt hàng sau cùng (là hàng 3), rồi mới diệt hàng tiên phong (là hàng 1).
+g) Thời gian chuyển quân:
+Thời gian giữa 2 hiệp đấu là 15 phút. Thời gian di chuyển (bằng tàu Fire) giữa các nhà cùng đảo này (không có cá heo) là 15m. Di chuyển sang đảo bên cạnh (không có cá heo, ví dụ: từ 50:50 sang 50:51) là 30m. Nếu các đảo có tọa độ càng xa nhau thì thời gian càng lâu (chẳng hạn từ 50:50 đến 51:51 khi không có cá heo sẽ là 30*sqrt(2)).
+Thời gian di chuyển từ một nhà sang nhà khác cùng đảo là tùy thuộc vào từng loại quân. Đọc kĩ tốc độ di chuyển của từng tàu.
+Nếu một đạo quân di chuyển sang nhà khác có nhiều loại quân khác nhau thì thời gian di chuyển bằng thời gian đi của loại quân đi chậm nhất.
+Khi một đạo quân sắp đánh hiệp tiếp theo, mà người chơi bấm rút quân. Thì đạo quân đó sẽ tiếp tục đánh nốt hiệp cuối rồi tan rã. Thời gian tan rã bằng 1 giờ cộng với thời gian quay về từ nơi tấn công đến nơi xuất phát.
+3) Minh họa cuộc tấn công thủy:
+a) Trận 1:
+Bên phòng thủ có chừng này tàu:
+ 	Đánh giá đội tàu này vẫn ít. Bảo vệ hai cánh chỉ có 100 ram. Số ở hàng 1 chỉ có 20 fire và 30 Steam ram (SR).
+Có đội hàng 2 cũng khá đông: 20 cata và 35 mortar. Hàng 3 cũng đông: 26 rocket và 55 diving.
+Đội phòng không có 86 Paddle
+Tuy vậy, nếu hàng 1 và hàng cánh ít như thế thì khi bị hủy diệt sẽ kéo theo hàng 2 và hàng 3 gục xuống.
+
+Để tạo ra lợi thế hơn hẳn quân địch: bên tấn công đã bật lò và bật luôn cá heo. Hai cái này tối quan trọng. Lò giúp diệt nhiều hơn và bảo vệ tốt hơn (do tăng cả công giáp), còn cá heo giúp đi tàu giảm thời gian di chuyển 50% - trong trường hợp cá heo cấp 5 tăng thêm 100% tốc độ (quân sẽ cơ động trong đánh và rút)
+
+Đầu tiên bên tấn công (BTC) gửi khoảng 21 Fire, 24 tàu SR (tầm 12 là tối thiểu), 80 ram ship, 9 rocket, 6 balloon, 15 diving (dự phòng cho rocket), 60 paddle. 6 Balloon được kích lò rồi thì rất khó chết, một round chỉ chết 1 con thôi.
+
+
+Hình 1: Round 1 với bên tấn công ở trên, Maxi85 ở dưới
+Ở đây phải gửi 21 con Fire để hứng damage của Rocket. Vì sao phải hứng: do Fire rẻ mà SR lại đắt, còn Rocket diệt SR rất tốt. Ta để Fire có 21 con (đủ 3 ô bằng với số ô của Rocket trong trận này) thì Fire đó sẽ hứng đạn của Rocket chứ không phải SR.
+Ở hình 1, quân Fire ở 2 bên đều chết nhiều. Chú ý rằng khi xếp quân thì Fire luôn có ưu tiên đứng trước SR.
+Lúc gửi đi đội đầu tiên rồi thì BTC gửi tiếp 1 đội nữa gồm khá đông Ram (63 tàu) với 21 Fire, 12 SR, 60 Paddle, 6 Balloon và 10 con Tender. Đội 2 này sẽ tham chiến ở Round 2.
+Lời bình: sao lại gửi Ram, Fire, SR, Paddle, Balloon và Tender như vậy? Do đội 1 của BTC chưa đủ diệt được đội tàu của nó nên đội 2 phải có nhiều ram để bù. Tổng cộng 140 ram đã vượt 100 ram của Maxi85. Paddle cũng có lập luận y như vậy. Tender bắt buộc đi cùng để bảo toàn sĩ khí (đội 1 chưa có Tender). BTC cũng gửi kèm 21 Fire, 12 SR và 6 Balloon theo cho đỡ mất điểm hành động. Thực ra, không cần gửi thêm Balloon và SR cũng được. Tùy...
+Round 2 diễn ra như này:
+
+Hình 2: Round 2 với việc SR của địch chết nhiều
+Các bạn có thể thấy, do không có Fire đỡ ở Round 2 nên SR của địch bắt đầu chết. Còn bên BTC vẫn còn Fire nên đã không chết con SR nào. Và thảm họa của địch bắt đầu xuất hiện: hàng 1 của Maxi85 đã chết khá nhiều, chuẩn bị đội Ram của Maxi85 phải tham gia.
+Khi xong Round 2 thì các Rocket (trong đội 1) của BTC cũng hết sạch đạn. Do BTC còn nhiều Rocket nên không cần rút đội 1 mà gửi ngay đội 3 gồm 9 Rocket và 21 Fire mới vào. Do có cá heo nên đội này chỉ đi có 10m.
+Round 3: đội 3 đã tham chiến
+
+Hình 3: Round 3 với việc rocket ở đội 1 hết đạn và rocket mới đã vào
+Có thể thấy Ram ship của Maxi85 đã đánh nhau ở hàng 1 và chết sạch. Balloon của BTC cũng diệt bớt số Rocket. Ở round này thì Maxi85 đã online và bật lò rồi.
+Trước khi bắt đầu Round 4, thì BTC đã gửi thêm đội Fire đến nữa. Đó là đội 4, nhưng BTC đã tính nhầm. Do chỉ gửi 15 Fire (thay vì 21) nên đội SR bắt đầu hứng đạn và chết đi 1 tàu
+
+Hình 4: Round 4 với việc Rocket hết đạn và Mortar sắp hết đạn
+Ở đây số Mortar của BTC sắp hết đạn nên BTC đã gửi ngay đội 5 là 9 Rocket và 21 Fire vào. Ngoài ra trước khi Round 4 bắt đầu đã nhấn rút đội 3.
+
+Hình 5: Round 5 với việc hàng 1 của địch chết gần sạch
+Chúng ta có thể thấy ở hình 5: số SR và Ram của Maxi85 đã chết gần như sạch. Thảm họa dành cho Maxi85 bắt đầu.
+Chú ý rằng khi sắp bắt đầu round 5 thì BTC đã gửi đội Mortar mới, sao cho chúng tham gia vào Round 6.
+
+Hình 6: Cái chết từ từ của toàn quân
+Ở đây ta có thể thấy: do hàng 1 và hàng cánh của Maxi85 đã tan nên địch phải trả giá bằng số rocket, mortar chết rất nhiều
+================================================
+Round 7 tiếp theo:
+
+===========================================
+Round 8
+

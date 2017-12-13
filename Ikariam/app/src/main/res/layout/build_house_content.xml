@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    >
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/townHallLevelLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceListItemSmall"
+            android:hint="Cấp TownHall"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:textSize="13sp"
+            android:textColor="#000"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/shipyardLevelLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceListItemSmall"
+            android:hint="Cấp Shipyard"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:text=""
+            android:textSize="13sp"
+            android:textColor="#000"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/portLevelLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceListItemSmall"
+            android:hint="Cấp Port"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:text=""
+            android:textSize="13sp"
+            android:textColor="#000"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:textSize="10sp"
+        android:textColor="@color/colorAccent"
+        android:text="Chọn phe"
+        />
+    <RadioGroup
+        android:id="@+id/partyView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="4dp"
+        >
+        <RadioButton
+            android:id="@+id/blueTeamView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Phe xanh"
+            android:contentDescription="0"
+            android:checked="true"
+            android:clickable="false"
+            />
+        <RadioButton
+            android:id="@+id/redTeamView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Phe đỏ"
+            android:contentDescription="1"
+            android:clickable="false"
+            />
+    </RadioGroup>
+</LinearLayout>

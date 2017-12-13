@@ -1,0 +1,573 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "5643248b3749d2a8290fa78fdc3c4568",
+    "entities": [
+      {
+        "tableName": "UnablePopulateTroop",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`unitName` TEXT NOT NULL, `amount` INTEGER NOT NULL, `party` INTEGER NOT NULL, PRIMARY KEY(`unitName`, `party`))",
+        "fields": [
+          {
+            "fieldPath": "unitName",
+            "columnName": "unitName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "party",
+            "columnName": "party",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "unitName",
+            "party"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "FightStatus",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `startTime` INTEGER NOT NULL, `isFighting` INTEGER NOT NULL, `turn` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTime",
+            "columnName": "startTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isFighting",
+            "columnName": "isFighting",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "turn",
+            "columnName": "turn",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Collosus",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`party` INTEGER NOT NULL, `level` INTEGER NOT NULL, `startTime` INTEGER NOT NULL, `endTime` INTEGER NOT NULL, `nextTimeAvailable` INTEGER NOT NULL, `percent` REAL NOT NULL, PRIMARY KEY(`party`))",
+        "fields": [
+          {
+            "fieldPath": "party",
+            "columnName": "party",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTime",
+            "columnName": "startTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endTime",
+            "columnName": "endTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nextTimeAvailable",
+            "columnName": "nextTimeAvailable",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percent",
+            "columnName": "percent",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "party"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "CollosusedTroop",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`unitName` TEXT NOT NULL, `amount` INTEGER NOT NULL, `startTime` INTEGER NOT NULL, `endTime` INTEGER NOT NULL, `isConfirm` INTEGER NOT NULL, PRIMARY KEY(`startTime`, `unitName`))",
+        "fields": [
+          {
+            "fieldPath": "unitName",
+            "columnName": "unitName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTime",
+            "columnName": "startTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endTime",
+            "columnName": "endTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isConfirm",
+            "columnName": "isConfirm",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "startTime",
+            "unitName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Whale",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`party` INTEGER NOT NULL, `level` INTEGER NOT NULL, `startTime` INTEGER NOT NULL, `endTime` INTEGER NOT NULL, `nextTimeAvailable` INTEGER NOT NULL, `extraPercent` REAL NOT NULL, PRIMARY KEY(`party`))",
+        "fields": [
+          {
+            "fieldPath": "party",
+            "columnName": "party",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTime",
+            "columnName": "startTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endTime",
+            "columnName": "endTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nextTimeAvailable",
+            "columnName": "nextTimeAvailable",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "extraPercent",
+            "columnName": "extraPercent",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "party"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Lo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`party` INTEGER NOT NULL, `level` INTEGER NOT NULL, `startTime` INTEGER NOT NULL, `endTime` INTEGER NOT NULL, `nextTimeAvailable` INTEGER NOT NULL, `extraDamePercent` REAL NOT NULL, `extraArmour` INTEGER NOT NULL, PRIMARY KEY(`party`))",
+        "fields": [
+          {
+            "fieldPath": "party",
+            "columnName": "party",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTime",
+            "columnName": "startTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endTime",
+            "columnName": "endTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nextTimeAvailable",
+            "columnName": "nextTimeAvailable",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "extraDamePercent",
+            "columnName": "extraDamePercent",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "extraArmour",
+            "columnName": "extraArmour",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "party"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ArmyLog",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`startTime` INTEGER NOT NULL, `content` TEXT, `type` TEXT, PRIMARY KEY(`startTime`))",
+        "fields": [
+          {
+            "fieldPath": "startTime",
+            "columnName": "startTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "content",
+            "columnName": "content",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "startTime"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "House",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`party` INTEGER NOT NULL, `townHalllevel` INTEGER, `shipyardlevel` INTEGER, `portlevel` INTEGER, `coordinatex` REAL, `coordinatey` REAL, PRIMARY KEY(`party`))",
+        "fields": [
+          {
+            "fieldPath": "party",
+            "columnName": "party",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "townHall.level",
+            "columnName": "townHalllevel",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "shipyard.level",
+            "columnName": "shipyardlevel",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "port.level",
+            "columnName": "portlevel",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "coordinate.x",
+            "columnName": "coordinatex",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "coordinate.y",
+            "columnName": "coordinatey",
+            "affinity": "REAL",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "party"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "User",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`userName` TEXT NOT NULL, `password` TEXT, `fullName` TEXT, `party` INTEGER NOT NULL, PRIMARY KEY(`userName`))",
+        "fields": [
+          {
+            "fieldPath": "userName",
+            "columnName": "userName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "password",
+            "columnName": "password",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fullName",
+            "columnName": "fullName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "party",
+            "columnName": "party",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "userName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "HomeTroop",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`party` INTEGER NOT NULL, `unitName` TEXT NOT NULL, `amount` INTEGER NOT NULL, PRIMARY KEY(`party`, `unitName`))",
+        "fields": [
+          {
+            "fieldPath": "party",
+            "columnName": "party",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unitName",
+            "columnName": "unitName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "party",
+            "unitName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "AttackTroop",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`unitName` TEXT NOT NULL, `amount` INTEGER NOT NULL, PRIMARY KEY(`unitName`))",
+        "fields": [
+          {
+            "fieldPath": "unitName",
+            "columnName": "unitName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "unitName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "SFieldTroop",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`party` INTEGER NOT NULL, `unitName` TEXT NOT NULL, `viewId` INTEGER NOT NULL, `amount` INTEGER NOT NULL, `maxAmount` INTEGER NOT NULL, `currentHitPoints` INTEGER NOT NULL, `currentMunitions` INTEGER NOT NULL, PRIMARY KEY(`party`, `unitName`, `viewId`))",
+        "fields": [
+          {
+            "fieldPath": "party",
+            "columnName": "party",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unitName",
+            "columnName": "unitName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "viewId",
+            "columnName": "viewId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maxAmount",
+            "columnName": "maxAmount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentHitPoints",
+            "columnName": "currentHitPoints",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentMunitions",
+            "columnName": "currentMunitions",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "party",
+            "unitName",
+            "viewId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "MovingTroop",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`unitName` TEXT NOT NULL, `amount` INTEGER NOT NULL, `startTime` INTEGER NOT NULL, `endTime` INTEGER NOT NULL, `isConfirm` INTEGER NOT NULL, `isReturn` INTEGER NOT NULL, PRIMARY KEY(`unitName`, `startTime`))",
+        "fields": [
+          {
+            "fieldPath": "unitName",
+            "columnName": "unitName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTime",
+            "columnName": "startTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endTime",
+            "columnName": "endTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isConfirm",
+            "columnName": "isConfirm",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isReturn",
+            "columnName": "isReturn",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "unitName",
+            "startTime"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"5643248b3749d2a8290fa78fdc3c4568\")"
+    ]
+  }
+}

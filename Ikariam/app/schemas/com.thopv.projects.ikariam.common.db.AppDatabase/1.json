@@ -1,0 +1,146 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "54253cd2b016adc04e4712ba6a367512",
+    "entities": [
+      {
+        "tableName": "House",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`houseId` TEXT NOT NULL, `party` INTEGER NOT NULL, `userName` TEXT, `townHalllevel` INTEGER, `shipyardlevel` INTEGER, `portlevel` INTEGER, `coordinatex` REAL, `coordinatey` REAL, PRIMARY KEY(`houseId`))",
+        "fields": [
+          {
+            "fieldPath": "houseId",
+            "columnName": "houseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "party",
+            "columnName": "party",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userName",
+            "columnName": "userName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "townHall.level",
+            "columnName": "townHalllevel",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "shipyard.level",
+            "columnName": "shipyardlevel",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "port.level",
+            "columnName": "portlevel",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "coordinate.x",
+            "columnName": "coordinatex",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "coordinate.y",
+            "columnName": "coordinatey",
+            "affinity": "REAL",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "houseId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "User",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`userName` TEXT NOT NULL, `password` TEXT, `fullName` TEXT, `party` INTEGER NOT NULL, PRIMARY KEY(`userName`))",
+        "fields": [
+          {
+            "fieldPath": "userName",
+            "columnName": "userName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "password",
+            "columnName": "password",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fullName",
+            "columnName": "fullName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "party",
+            "columnName": "party",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "userName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Troop",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`houseId` TEXT NOT NULL, `unitName` TEXT NOT NULL, `amount` INTEGER NOT NULL, PRIMARY KEY(`houseId`, `unitName`))",
+        "fields": [
+          {
+            "fieldPath": "houseId",
+            "columnName": "houseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unitName",
+            "columnName": "unitName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "houseId",
+            "unitName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"54253cd2b016adc04e4712ba6a367512\")"
+    ]
+  }
+}

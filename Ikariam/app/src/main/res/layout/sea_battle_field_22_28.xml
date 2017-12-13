@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/containerId"
+    android:layout_height="match_parent"
+    android:background="@drawable/sea_battle_field">
+
+    <Button
+        android:id="@+id/xinThuaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="XIN THUA"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@android:color/holo_red_light"
+
+        android:text="KHAI CHIẾN"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/bottom_right_two1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintStart_toEndOf="@+id/bottom_right_one1"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_support_left_three1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintStart_toEndOf="@+id/top_support_left_two1"
+        app:layout_constraintTop_toTopOf="@+id/top_left_three1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_support_right_three1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintEnd_toStartOf="@+id/top_support_right_two1"
+        app:layout_constraintTop_toTopOf="@+id/top_right_three1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_support_left_two1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintStart_toEndOf="@+id/bottom_support_left_one1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_support_right_two1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintEnd_toStartOf="@+id/bottom_support_right_one1"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_right_two2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottom_right_one2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_support_left_two2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottom_support_left_one2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_support_right_two2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_support_right_one2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_support_right_three2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/top_right_three2"
+        app:layout_constraintEnd_toStartOf="@+id/top_support_right_two2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_support_left_three2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/top_left_three2"
+        app:layout_constraintStart_toEndOf="@+id/top_support_left_two2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_support_left_two1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintStart_toEndOf="@+id/top_support_left_one1"
+        app:layout_constraintTop_toTopOf="@+id/top_support_left_three1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_left_one1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintEnd_toStartOf="@+id/bottom_middle1"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_left_three1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintEnd_toStartOf="@+id/middle_left_two1"
+        app:layout_constraintTop_toTopOf="@+id/middle_left_two1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_right_three1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintStart_toEndOf="@+id/middle_right_two1"
+        app:layout_constraintTop_toTopOf="@+id/middle_right_two1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_right_three1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintStart_toEndOf="@+id/top_right_two1"
+        app:layout_constraintTop_toTopOf="@+id/top_right_two1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_left_three1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintEnd_toStartOf="@+id/top_left_two1"
+        app:layout_constraintTop_toTopOf="@+id/top_left_two1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_support_right_two1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintEnd_toStartOf="@+id/top_support_right_one1"
+        app:layout_constraintTop_toTopOf="@+id/top_support_right_three1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_support_left_two2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/top_support_left_three2"
+        app:layout_constraintStart_toEndOf="@+id/top_support_left_one2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_support_right_two2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/top_support_right_three2"
+        app:layout_constraintEnd_toStartOf="@+id/top_support_right_one2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_left_three2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/middle_left_two2"
+        app:layout_constraintEnd_toStartOf="@+id/middle_left_two2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_right_three2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/middle_right_two2"
+        app:layout_constraintStart_toEndOf="@+id/middle_right_two2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_right_three2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/middle_right_three2"
+        app:layout_constraintStart_toEndOf="@+id/top_right_two2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_right_one1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintStart_toEndOf="@+id/bottom_middle1"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_support_right_one1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_support_right_two1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_support_left_one1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_support_left_two1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_left_two1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/top_left_two1"
+        app:layout_constraintEnd_toStartOf="@+id/middle_left_one1"
+        app:layout_constraintTop_toTopOf="@+id/middle_left_one1"
+        app:layout_constraintVertical_bias="0.0" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_right_two1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/top_right_two1"
+        app:layout_constraintStart_toEndOf="@+id/middle_right_one1"
+        app:layout_constraintTop_toTopOf="@+id/middle_right_one1"
+        app:layout_constraintVertical_bias="0.0" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_left_two1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintEnd_toStartOf="@+id/top_left_one1"
+        app:layout_constraintTop_toTopOf="@+id/top_left_one1">
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_right_two1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintStart_toEndOf="@+id/top_right_one1"
+        app:layout_constraintTop_toTopOf="@+id/top_right_one1">
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_left_two2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/midle_left_one2"
+        app:layout_constraintEnd_toStartOf="@+id/midle_left_one2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_right_two2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/bottom_right_two2"
+        app:layout_constraintStart_toEndOf="@+id/middle_right_one2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_right_one2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottom_middle2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_support_left_one2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/top_support_left_two2"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_support_right_one2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/top_support_right_two2"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_left_two2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/middle_left_two2"
+        app:layout_constraintEnd_toStartOf="@+id/top_left_one2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_right_two2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/middle_right_two2"
+        app:layout_constraintStart_toEndOf="@+id/top_right_one2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_support_left_one2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_support_right_one2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_left_one2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/midle_left_one2"
+
+        app:layout_constraintEnd_toStartOf="@+id/top_middle2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_right_one2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/middle_right_one2"
+        app:layout_constraintStart_toEndOf="@+id/top_middle2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_middle2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_middle1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_middle1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintTop_toBottomOf="@+id/bottom_middle1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_middle1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintTop_toBottomOf="@+id/middle_middle1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_support_left_one1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_support_right_one1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_left_one1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintEnd_toStartOf="@+id/middle_middle1"
+
+        app:layout_constraintTop_toTopOf="@+id/middle_middle1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_right_one1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintStart_toEndOf="@+id/middle_middle1"
+
+        app:layout_constraintTop_toTopOf="@+id/middle_middle1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_left_one1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintEnd_toStartOf="@+id/top_middle1"
+
+        app:layout_constraintTop_toTopOf="@+id/top_middle1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_right_one1"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintStart_toEndOf="@+id/top_middle1"
+
+        app:layout_constraintTop_toTopOf="@+id/top_middle1" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_middle2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+        app:layout_constraintBottom_toTopOf="@+id/middle_middle2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_left_one2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_middle2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_middle2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_middle2"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/midle_left_one2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/bottom_left_one2"
+        app:layout_constraintEnd_toStartOf="@+id/middle_middle2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/middle_right_one2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/bottom_right_one2"
+        app:layout_constraintStart_toEndOf="@+id/middle_middle2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/top_left_three2"
+        android:layout_width="@dimen/unit_cardview_width"
+        android:layout_height="@dimen/unit_cardview_height"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/middle_left_three2"
+        app:layout_constraintEnd_toStartOf="@+id/top_left_two2" >
+
+        <include
+            layout="@layout/sea_battle_unit_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

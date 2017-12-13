@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    >-->
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/logContentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:text="Bạn vừa điều động quân đến House_12"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            />
+        <TextView
+            android:id="@+id/sendTimeView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:textStyle="italic"
+            android:text="Gửi đi từ 4 phút trước"
+            android:textColor="#000"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="8dp"
+            />
+        <TextView
+            android:id="@+id/arriveTimeView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:textStyle="italic"
+            android:text="Đến nơi trong 2 phút nữa"
+            android:textColor="#000"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="8dp"
+            />
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="Đội quân bao gồm: "
+            android:textColor="#000"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/unitsListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="8dp"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+<!--
+</android.support.v4.widget.NestedScrollView>-->

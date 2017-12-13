@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "206209534014",
+    "firebase_url": "https://laotsezufirebaseprojects.firebaseio.com",
+    "project_id": "laotsezufirebaseprojects",
+    "storage_bucket": "laotsezufirebaseprojects.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206209534014:android:fe07b8ffd4131b97",
+        "android_client_info": {
+          "package_name": "com.laotsezu.mysmartmp3player"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206209534014-9r1igshqpabt0qe5lvr8nm8nv51t4h55.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.laotsezu.mysmartmp3player",
+            "certificate_hash": "d921de943f0b576dd77202aaf3b4a5c84f4012fd"
+          }
+        },
+        {
+          "client_id": "206209534014-nsrnqsrk3hqndbbq5rl0v0b5omlui2b2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDH1BFQYGCx0U2acQH4J_NOsadnzKWVVA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206209534014-nsrnqsrk3hqndbbq5rl0v0b5omlui2b2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206209534014:android:709c34f7f59ccb5c",
+        "android_client_info": {
+          "package_name": "com.thopv.projects.ikariam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206209534014-bu0t5p5n85ri34mrbkk39laccka59h8j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thopv.projects.ikariam",
+            "certificate_hash": "e2808f376b20c24bae23c308e28806d906b75948"
+          }
+        },
+        {
+          "client_id": "206209534014-nsrnqsrk3hqndbbq5rl0v0b5omlui2b2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDH1BFQYGCx0U2acQH4J_NOsadnzKWVVA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206209534014-nsrnqsrk3hqndbbq5rl0v0b5omlui2b2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thopv.projects.ikariam.users.presentation.UserActivity">
+
+    <TextView
+        android:id="@+id/appNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="Ikariam"
+        android:textSize="36sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameView"
+        app:srcCompat="@drawable/mattis" />
+
+    <ImageView
+        android:id="@+id/icon2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/icon1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/icon1"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/sina" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/userNameViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon1">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/userNameView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tài khoản"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:text="admin"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/passwordViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNameViewContainer">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/passwordView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mật khẩu"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:text="1"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Đăng nhập"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@+id/passwordViewContainer" />
+
+    <TextView
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:text="Bạn chưa có tài khoản ? Đăng ký"
+        android:textSize="13sp"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+</android.support.constraint.ConstraintLayout>

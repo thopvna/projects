@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="32dp"
+    android:paddingEnd="28dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <TextView
+        android:id="@+id/weaponLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textStyle="bold"
+        android:textColor="#000"
+
+        android:layout_marginStart="8dp"
+        android:text="Weapon:"
+        app:layout_constraintStart_toEndOf="@+id/unitIconView"
+        app:layout_constraintTop_toTopOf="@+id/weaponValueView" />
+
+    <TextView
+        android:id="@+id/armorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textStyle="bold"
+        android:textColor="#000"
+
+        android:text="Armor:"
+        app:layout_constraintStart_toEndOf="@+id/unitIconView"
+        app:layout_constraintTop_toTopOf="@+id/armorValueView" />
+
+    <TextView
+        android:id="@+id/hitpointsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textStyle="bold"
+        android:textColor="#000"
+
+        android:layout_marginStart="8dp"
+        android:text="Hitpoints:"
+        app:layout_constraintStart_toEndOf="@+id/unitIconView"
+        app:layout_constraintTop_toTopOf="@+id/hitpointsValueView" />
+
+    <TextView
+        android:id="@+id/shipTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textStyle="bold"
+        android:textColor="#000"
+
+        android:layout_marginStart="8dp"
+        android:text="ShipType:"
+        app:layout_constraintStart_toEndOf="@+id/unitIconView"
+        app:layout_constraintTop_toTopOf="@+id/shipTypeValueView" />
+
+    <TextView
+        android:id="@+id/sizeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textStyle="bold"
+        android:textColor="#000"
+
+        android:text="Size:"
+        app:layout_constraintStart_toEndOf="@+id/unitIconView"
+        app:layout_constraintTop_toTopOf="@+id/sizeValueView" />
+
+    <ImageView
+        android:id="@+id/unitIconView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#000"
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ballista_ship" />
+
+    <TextView
+        android:id="@+id/weaponValueView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="end"
+        android:text="weaponValueView"
+        android:textAppearance="?android:textAppearanceSmall"
+
+        android:textColor="#000"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weaponLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hitpointsValueView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#000"
+
+        android:gravity="end"
+        android:text="hitpointsValueView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/armorValueView" />
+
+    <TextView
+        android:id="@+id/armorValueView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="end"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#000"
+
+        android:text="armorValueView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weaponValueView" />
+
+    <TextView
+        android:id="@+id/sizeValueView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="end"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#000"
+
+        android:text="sizeValueView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shipTypeValueView" />
+
+    <TextView
+        android:id="@+id/shipTypeValueView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="end"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#000"
+
+        android:text="shipTypeValueView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hitpointsValueView" />
+
+    <TextView
+        android:id="@+id/unitNameView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="unitNameView"
+        android:lines="1"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#000"
+
+        app:layout_constraintEnd_toEndOf="@+id/unitIconView"
+        app:layout_constraintStart_toStartOf="@+id/unitIconView"
+        app:layout_constraintTop_toBottomOf="@+id/unitIconView" />
+</android.support.constraint.ConstraintLayout>
